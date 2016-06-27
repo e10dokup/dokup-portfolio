@@ -1,8 +1,20 @@
 var gulp = require("gulp");
+var browserify = require('browserify');
 var sass = require("gulp-sass");
 var uglify = require("gulp-uglify");
 var browser = require("browser-sync");
 var plumber = require("gulp-plumber");
+var source = require("vinyl-source-stream");
+var buffer = require("vinyl-buffer");
+var watchify = require("gulp-watchify");
+var sourcemaps = require("gulp-sourcemaps");
+
+
+var paths = {
+	OUT: "bundle.js",
+	SRC: "./src/js/",
+	BUILD: "./public/js/"
+};
 
 gulp.task("server", function() {
 	browser({
@@ -13,22 +25,27 @@ gulp.task("server", function() {
 });
 
 gulp.task("sass", function() {
-	gulp.src("sass/**/*scss")
+	gulp.src("./src/scss/*scss")
 		.pipe(plumber())
 		.pipe(sass())
-		.pipe(gulp.dest("./css"))
-		.pipe(browser.reload({stream:true}))
+		.pipe(gulp.dest("./public/css"))
+		.pipe(browser.reload({stream: true}))
 });
 
 gulp.task("js", function() {
-	gulp.src(["js/**/*js", "!js/min/**/*.js"])
-		.pipe(plumber())
+	watchify(browserify(paths.SRC + 'main.js', { debug: true})
+		.bundle()
+		.on("error", function (err) { console.log("Error : " + err.message); })
+		.pipe(source(paths.OUT))
+		.pipe(buffer())
+		.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(uglify())
-		.pipe(gulp.dest("./js/min"))
-		.pipe(browser.reload({stream:true}))
-});
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest(paths.BUILD))
+		.pipe(browser.reload({stream: true}))
+	)});
 
-gulp.task("default", ['server'], function() {
-    gulp.watch(["js/**/*.js","!js/min/**/*.js"],["js"]);
-    gulp.watch("sass/**/*.scss",["sass"]);
+gulp.task("default", ['server', 'js', 'sass'], function() {
+    gulp.watch('./src/js',["js"]);
+    gulp.watch('./src/scss',["sass"]);
 });
