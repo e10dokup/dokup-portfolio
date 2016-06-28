@@ -1,6 +1,31 @@
-h1 {
-	color: red;
-	&:hover {
-		color: blue;
-	}
+.portfolio-header {
+  position: relative;
+  background: #0288D1;
+}
+
+.portfolio-header .mdl-layout__header-row {
+  padding:0;
+  justify-content: center;
+}
+
+.mdl-layout-title {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.is-compact .mdl-layout__title span {
+  display: none;
+}
+
+.portfolio-logo-row {
+  min-height: 200px;
+}
+
+.portfolio-logo {
+  background: url(/image/leaf_white.png) 50% no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  margin: auto auto 20px;
 }
