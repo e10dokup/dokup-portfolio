@@ -43,9 +43,14 @@ gulp.task("js", function() {
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest(paths.BUILD))
 		.pipe(browser.reload({stream: true}))
-	)});
+)});
+
+gulp.task("content", function () {
+	browser.reload()
+});
 
 gulp.task("default", ['server', 'js', 'sass'], function() {
-    gulp.watch('./src/js',["js"]);
-    gulp.watch('./src/scss',["sass"]);
+    gulp.watch('./src/js/*js', ["js"]);
+    gulp.watch('./src/scss/*scss', ["sass"]);
+	gulp.watch('./{content/*html,index.html}', ["content"]);
 });
