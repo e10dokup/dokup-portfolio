@@ -8,6 +8,7 @@ var source = require("vinyl-source-stream");
 var buffer = require("vinyl-buffer");
 var watchify = require("gulp-watchify");
 var sourcemaps = require("gulp-sourcemaps");
+var autoprefixer = require("gulp-autoprefixer");
 
 
 var paths = {
@@ -28,6 +29,7 @@ gulp.task("sass", function() {
 	gulp.src("./src/scss/*scss")
 		.pipe(plumber())
 		.pipe(sass())
+		.pipe(autoprefixer())
 		.pipe(gulp.dest("./public/css"))
 		.pipe(browser.reload({stream: true}))
 });
