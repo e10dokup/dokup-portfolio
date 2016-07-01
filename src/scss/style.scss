@@ -19,7 +19,11 @@
 }
 
 .portfolio-logo-row {
-  min-height: 250px;
+  min-height: 200px;
+}
+
+.is-compact .portfolio-logo-row {
+  min-height: auto;
 }
 
 .portfolio-logo {
@@ -30,21 +34,25 @@
   margin: auto auto 20px;
 }
 
+.is-compact .portfolio-logo {
+  height: 50px;
+  width: 50px;
+  margin-top: 7px;
+}
+
 .portfolio-navigation-row {
   background-color: rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
   height: 45px;
 }
 
-.portfolio-navigation-row .mdl-navigation__link {
+.portfolio-navigation-row .mdl-navigation {
   text-align: center;
-  max-width: 1000px;
+  max-width: 900px;
   width: 100%;
 }
 
 .portfolio-navigation-row .mdl-navigation__link {
   flex: 1;
-  width: 150px;
   line-height: 42px;
   &:hover {
     background-color: rgba(197, 197, 197, 0.10);
@@ -52,7 +60,6 @@
 }
 
 .portfolio-header .mdl-layout__drawer-button {
-  background-color: rgba(197, 197, 197, 0.44);
 }
 
 .portfolio-navigation-row .is-active {
@@ -70,3 +77,59 @@
   background-color: #FF6E40;
   left: 0;
 }
+
+.portfolio-card .mdl-card__title {
+  padding-bottom: 0;
+}
+
+img.article-image {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-max-width {
+  max-width: 900px;
+  margin: auto;
+}
+
+.portfolio-copy {
+  max-width: 700px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-left-padding {
+  padding-left: 0;
+}
+
+.no-bottom-padding {
+  padding-bottom: 0;
+}
+
+.padding-top {
+  padding: 10px 0 0;
+}
+
+.portfolio-share-btn {
+  position: relative;
+  float: right;
+  top: -4px;
+}
+
+.demo-card-event > .mdl-card__actions {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.portfolio-contact .mdl-textfield {
+  width: 100%;
+}
+
+.footer {
+  background-color: #546E7A;
+  background-size: cover;
+}
+
