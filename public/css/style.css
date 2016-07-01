@@ -32,7 +32,7 @@
 .is-compact .portfolio-logo {
   height: 50px;
   width: 50px;
-  margin-top: 7px; }
+  margin: auto; }
 
 .portfolio-navigation-row {
   background-color: rgba(0, 0, 0, 0.2);
@@ -68,6 +68,9 @@
 .portfolio-card .mdl-card__title {
   padding-bottom: 0; }
 
+.mdl-card__title {
+  margin: 0 10px 0 10px; }
+
 img.article-image {
   width: 100%;
   height: auto; }
@@ -77,7 +80,7 @@ img.article-image {
   margin: auto; }
 
 .portfolio-copy {
-  max-width: 700px; }
+  max-width: 800px; }
 
 .no-padding {
   padding: 0; }
