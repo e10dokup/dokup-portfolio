@@ -80,7 +80,7 @@ img.article-image {
   margin: auto; }
 
 .portfolio-copy {
-  max-width: 800px; }
+  margin: 0 30px 0 30px; }
 
 .no-padding {
   padding: 0; }
