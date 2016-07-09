@@ -37,7 +37,7 @@
 .is-compact .portfolio-logo {
   height: 50px;
   width: 50px;
-  margin-top: 7px;
+  margin: auto;
 }
 
 .portfolio-navigation-row {
@@ -79,6 +79,10 @@
   padding-bottom: 0;
 }
 
+.mdl-card__title {
+  margin: 0 10px 0 10px;
+}
+
 img.article-image {
   width: 100%;
   height: auto;
@@ -90,7 +94,7 @@ img.article-image {
 }
 
 .portfolio-copy {
-  max-width: 700px;
+  margin: 0 30px 0 30px;
 }
 
 .no-padding {
@@ -125,8 +129,64 @@ img.article-image {
   width: 100%;
 }
 
+.portfolio-icons {
+  font-size: 50px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  list-style: none;
+
+  a {
+    color: #455A64;
+    padding: 30px;
+  }
+}
+
+.portfolio-icon {
+  animation: smallout ease-in-out 0.5s forwards;
+  &:hover {
+    animation: largeout ease-in-out 0.5s forwards;
+  }
+
+}
+
 .footer {
   background-color: #546E7A;
   background-size: cover;
 }
+
+@keyframes largeout {
+  10% {
+    transform: scale(1.0)
+  }
+
+  85% {
+    transform: scale(1.3)
+  }
+
+  100% {
+    transform: scale(1.2)
+  }
+}
+
+@keyframes smallout {
+  0% {
+    transform: scale(1.2)
+  }
+
+  10% {
+    transform: scale(1.2)
+  }
+
+  85% {
+    transform: scale(0.9)
+  }
+
+  100% {
+    transform: scale(1.0)
+  }
+}
+
 
