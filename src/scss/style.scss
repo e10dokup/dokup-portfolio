@@ -148,8 +148,12 @@ img.article-image {
   animation: smallout ease-in-out 0.5s forwards;
   &:hover {
     animation: largeout ease-in-out 0.5s forwards;
+    color: #607D8B;
   }
+}
 
+.portfolio-link {
+  color: #5C6BC0;
 }
 
 .footer {
