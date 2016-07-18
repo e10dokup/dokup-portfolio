@@ -152,6 +152,22 @@ img.article-image {
   }
 }
 
+.portfolio-works {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  list-style: none;
+}
+
+.portfolio-work {
+  background-size: cover;
+  height: auto;
+  width: 150px;
+  margin: 20px 20px 20px;
+}
+
 .portfolio-link {
   color: #5C6BC0;
 }

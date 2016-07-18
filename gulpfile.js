@@ -19,6 +19,7 @@ var paths = {
 
 gulp.task("server", function() {
 	browser({
+    port: 8888,
 		server: {
 			baseDir: "./"
 		}
