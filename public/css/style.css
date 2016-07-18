@@ -111,31 +111,22 @@ img.article-image {
 .portfolio-contact .mdl-textfield {
   width: 100%; }
 
-.portfolio-icons {
-  font-size: 50px;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  list-style: none; }
-  .portfolio-icons a {
-    color: #455A64;
-    padding: 30px; }
+.accounts-wrapper {
+  display: table;
+  width: 80%;
+  margin: 20px auto 0;
+  table-layout: fixed; }
 
-.portfolio-icon {
+.account-box {
+  font-size: 50px;
+  display: table-cell;
+  text-align: center; }
+
+.account-icon {
+  color: #455A64;
   -webkit-animation: smallout ease-in-out 0.5s forwards;
           animation: smallout ease-in-out 0.5s forwards; }
-  .portfolio-icon:hover {
+  .account-icon:hover {
     -webkit-animation: largeout ease-in-out 0.5s forwards;
             animation: largeout ease-in-out 0.5s forwards;
     color: #607D8B; }
