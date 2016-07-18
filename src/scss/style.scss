@@ -132,7 +132,7 @@ img.article-image {
 .accounts-wrapper {
   display: table;
   width: 80%;
-  margin: 20px auto 0;
+  margin: 20px auto 20px;
   table-layout: fixed;
 }
 
@@ -151,20 +151,22 @@ img.article-image {
   }
 }
 
-.portfolio-works {
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: baseline;
-  list-style: none;
+.works-wrapper {
+  display: table;
+  width: 80%;
+  margin: 20px auto 20px;
+  table-layout: fixed;
 }
 
-.portfolio-work {
+.work-box {
+  display: table-cell;
+  text-align: center;
+}
+
+.work {
   background-size: cover;
   height: auto;
   width: 150px;
-  margin: 20px 20px 20px;
 }
 
 .portfolio-link {
