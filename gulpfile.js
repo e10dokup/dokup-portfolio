@@ -9,7 +9,6 @@ var buffer = require("vinyl-buffer");
 var watchify = require("gulp-watchify");
 var sourcemaps = require("gulp-sourcemaps");
 var autoprefixer = require("gulp-autoprefixer");
-var ghPages = require('gulp-gh-pages');
 
 
 var paths = {
@@ -57,9 +56,4 @@ gulp.task("default", ['server', 'js', 'sass'], function() {
     gulp.watch('./src/js/*js', ["js"]);
     gulp.watch('./src/scss/*scss', ["sass"]);
 	gulp.watch(['./index.html', './content/*html'], ["content"]);
-});
-
-gulp.task('deploy', function() {
-	return gulp.src('./app/**/*')
-		.pipe(ghPages());
 });
