@@ -178,6 +178,17 @@ img.article-image {
   background-size: cover;
 }
 
+@media (max-width: 768px) {
+  .accounts-wrapper, .account-box {
+    display: block;
+  }
+
+  .account-box {
+    font-size: 70px;
+    margin: 40px auto;
+  }
+}
+
 @keyframes largeout {
   10% {
     transform: scale(1.0)

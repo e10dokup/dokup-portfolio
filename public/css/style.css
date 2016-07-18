@@ -153,6 +153,13 @@ img.article-image {
   background-color: #546E7A;
   background-size: cover; }
 
+@media (max-width: 768px) {
+  .accounts-wrapper, .account-box {
+    display: block; }
+  .account-box {
+    font-size: 70px;
+    margin: 40px auto; } }
+
 @-webkit-keyframes largeout {
   10% {
     -webkit-transform: scale(1);
