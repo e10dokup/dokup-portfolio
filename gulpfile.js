@@ -19,6 +19,7 @@ var paths = {
 
 gulp.task("server", function() {
 	browser({
+    port: 8888,
 		server: {
 			baseDir: "./"
 		}
@@ -54,5 +55,5 @@ gulp.task("content", function () {
 gulp.task("default", ['server', 'js', 'sass'], function() {
     gulp.watch('./src/js/*js', ["js"]);
     gulp.watch('./src/scss/*scss', ["sass"]);
-	gulp.watch('./{content/*html,index.html}', ["content"]);
+	gulp.watch(['./index.html', './content/*html'], ["content"]);
 });

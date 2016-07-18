@@ -137,7 +137,34 @@ img.article-image {
           animation: smallout ease-in-out 0.5s forwards; }
   .portfolio-icon:hover {
     -webkit-animation: largeout ease-in-out 0.5s forwards;
-            animation: largeout ease-in-out 0.5s forwards; }
+            animation: largeout ease-in-out 0.5s forwards;
+    color: #607D8B; }
+
+.portfolio-works {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  list-style: none; }
+
+.portfolio-work {
+  background-size: cover;
+  height: auto;
+  width: 150px;
+  margin: 20px 20px 20px; }
+
+.portfolio-link {
+  color: #5C6BC0; }
 
 .footer {
   background-color: #546E7A;
