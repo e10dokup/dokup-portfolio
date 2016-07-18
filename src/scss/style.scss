@@ -185,7 +185,21 @@ img.article-image {
 
   .account-box {
     font-size: 70px;
-    margin: 40px auto;
+    margin: 20px auto;
+  }
+
+  .works-wrapper, .work-box {
+    display: block;
+  }
+
+  .work-box {
+    margin: 20px auto;
+  }
+
+  .work {
+    background-size: cover;
+    height: auto;
+    width: 200px;
   }
 }
 
